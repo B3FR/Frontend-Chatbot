@@ -1,0 +1,36 @@
+.activate{
+  color: #6D6E71; 
+}
+.active{
+  color: #F9B52F;
+  margin-left: 10px;
+}
+
+.content_title {
+  width: auto;
+  height: 100px;
+  margin: 5% 10% 0 10% ;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.content_title div{
+  display: flex;
+  flex-direction: row;
+}
+
+.app{
+  width: auto;
+  height: auto;
+  margin: 5% 7% 0 7% ;
+  margin-bottom: 30px;
+  background-color: rgba(240, 248, 255, 0);
+}
+
+.logo_app{
+  width: 100%;
+  height: auto;
+}

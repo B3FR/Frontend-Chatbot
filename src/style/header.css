@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.bodyHeader_main {
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+
+.bodyHeader1 {
+    width: 30%;
+    height: auto;
+    margin-left: 5%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: url(../assets/Head1Olva.png);
+}
+.content_2 {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bodyHeader2 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/Head2Olva.png);
+}
+
+.contain_Opciones{
+    width: 80%;
+    height: auto;
+    font-size: 100%;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.contain_Opciones p{
+    text-align: center;
+    color: #F9B52F; 
+}
+
+.contain_Opciones button{
+    margin-right: 10px;
+    font-size: 100%;
+}
+.btn_opcion{
+    background-color: rgba(255, 255, 255, 0);
+    color: #6D6E71;
+    font-weight: bold;
+    border: none;
+    
+}
+
+.contain_Opciones button:hover{
+    color: #F9B52F; 
+}

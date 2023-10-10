@@ -1,0 +1,181 @@
+.contetChat{
+    width: auto;
+    margin-left: 10px;
+    height: 100%;
+    stroke-linecap: round;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+
+.content_text{
+    width: auto;
+    padding:  10px 20px;
+    margin: 3px 0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px 15px 23px -13px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -4px 15px 23px -13px rgba(0,0,0,0.5);
+    -moz-box-shadow: -4px 15px 23px -13px rgba(0,0,0,0.5);
+}
+.content_text_main {
+    width: auto;
+    height: 100%;
+    overflow: scroll;
+    padding-bottom: 50px;
+}
+
+/**===================== CONTENT CHAT ======================*/
+.content_bot{
+    width: auto;
+    height: auto;
+    padding: 0 10px 0 10px;
+    display: flex;
+    justify-content: start;
+}
+.bot {
+    background-color: rgb(255, 255, 255);
+    color: #6D6E71;
+}
+.content_user{
+    width: auto;
+    height: auto;
+    padding: 0 10px 0 10px;
+    display: flex;
+    justify-content: end;
+}
+.user{
+    background-color: #F9B52F;
+    color: #ffffff;
+}
+
+/*===========================================================*/
+.contentInput{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.btnBorrar{
+    width: 40px;
+    height: 40px;
+    background-color: #F9B52F;
+    border-radius: 50px;
+    padding: 10px;
+    border: none;
+    box-shadow: -4px 15px 23px -13px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -4px 15px 23px -13px rgba(0,0,0,0.5);
+    -moz-box-shadow: -4px 15px 23px -13px rgba(0,0,0,0.5);
+}
+.btnBorrar img{
+    width: 40%;
+    height: 40%;
+}
+
+.input_main{
+    width: 92.5%;
+    margin: 0 10px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    box-shadow: -4px 15px 23px -13px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -4px 15px 23px -13px rgba(0,0,0,0.5);
+    -moz-box-shadow: -4px 15px 23px -13px rgba(0,0,0,0.5);
+}
+
+.input_main input{
+    width: 92%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: #6B6B6B;
+    padding: 10px 20px;
+}
+.btnEnviar{
+    width: 40px;
+    height:40px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+}
+
+.btnEnviar img{
+    width: 60%;
+}
+
+/* ==================== FORM MAIN =================================*/
+.content_text_main_principal {
+    width: 100%;
+    height: 100%;
+}
+.main_principal{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.options{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.optios_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.options button{
+    flex:5;
+    width: auto;
+    height: auto;
+    padding: 20px 40px;
+    margin: 20px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    color:#6B6B6B;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.options button:hover{
+    box-shadow: 10px 10px 32px -19px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 32px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 32px -19px rgba(0,0,0,0.75);
+}
+.optios_content_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #F9B52F;
+    background-size: cover;
+    overflow: hidden;
+}
+.optios_content_img img{
+    width: 100%;
+    height: 100%;
+}
+.optios_content_img:hover{
+    transform: scale(0.97);
+}
