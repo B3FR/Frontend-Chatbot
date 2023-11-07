@@ -1,6 +1,4 @@
-import { Context } from "../..//conntext/contexsocketio";
-
-import React, {useContext} from "react";
+import React from "react";
 import "../../style/Login.css";
 import Flecha from '../../assets/icon-next 1.png';
 import { Link } from 'react-router-dom';
@@ -9,37 +7,26 @@ import { useForm } from "react-hook-form";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Register() {
 
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({});
-  const { User, setUser } = useContext(Context);
+
+
+  const [ user, setFormData ] = useState({});
 
   const { register, handleSubmit, formState: { errors } } = useForm();
-
-  const [error, setError] = useState("");
 
   const onSubmit = async data => {
     setFormData(data);
 
-    /*
     try {
-      const response = await axios.post('http://localhost:5000/login', data);
+      const response = await axios.post('http://localhost:5000/register', data);
       console.log(response.data);
-      if (response.data.message === 'Inicio de sesión exitoso') {
-        setUser(response.data.username);
-        //guardar la sesión
-        localStorage.setItem("user", response.data.username);
-        console.log(User)
-        navigate("/home");
-
-      } else {
-        setError(response.data.message);
-      }
+      navigate("/auth/login");
     } catch (error) {
       console.log(error.response.data);
+      navigate("/auth/login");
     }
-    */
   };
 
   return (
@@ -65,7 +52,7 @@ function Login() {
             <div className="content_title_login">
               <p className="title">Bienvenido a Olva </p>
               <p className="description">
-                Inicia sesión para entrar a nuestra web
+                Registrate para entrar a nuestra web
               </p>
             </div>
             <input type="text" placeholder="Usuario"
@@ -81,7 +68,50 @@ function Login() {
               })}
             />
             {errors.username && <span className="content_error">{errors.username.message}</span>}
+
+            <input type="number" placeholder="Dni"
+              {...register("dni", {
+                required: {
+                  value: true,
+                  message: "Necesitas este campo"
+                },
+                pattern: {
+                  value: /^[0-9]{8}(?:[-\s][0-9a-zA-Z])?$/,
+                  message: "El DNI no es correcto"
+                }
+              })}
+            />
+            {errors.dni && <span className="content_error">{errors.dni.message}</span>}
+
+            <input type="text" placeholder="Dirección"
+              {...register("direccion", {
+                required: {
+                  value: true,
+                  message: "Necesitas este campo"
+                },
+                pattern: {
+                  value: /^[a-zA-Z0-9\s,.-]+$/,
+                  message: "La dirección no es correcto"
+                }
+              })}
+            />
+            {errors.direccion && <span className="content_error">{errors.direccion.message}</span>}
+
+            <input type="email" placeholder="Correo electronico"
+              {...register("email", {
+                required: {
+                  value: true,
+                  message: "Necesitas este campo"
+                },
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                  message: "El formato no es correcto"
+                }
+              })}
+            />
+            {errors.email && <span className="content_error">{errors.email.message}</span>}
             <input type="password" placeholder="Contraseña"
+
               {...register("password", {
                 required: {
                   value: true,
@@ -94,14 +124,14 @@ function Login() {
               })}
             />
             {errors.password && <span className="content_error">{errors.password.message}</span>}
-            {error && <span className="content_error">{error}</span>}
 
-            <button className="login-btn" type="submit" value="submit">Entrar</button>
+            <button className="login-btn" type="submit" value="submit">Registrar</button>
 
             <div className="content_foot">
-              <p> ¿No tienes cuenta?</p>
-              <Link to="/auth/register">
-                <button src="#" className="text">Registrate aquí </button>
+              <p>¿Ya tienes cuenta?</p>
+
+              <Link to="/auth/login">
+                <button className="text">Inicia Sesión aquí </button>
               </Link>
             </div>
 
@@ -109,10 +139,12 @@ function Login() {
         </form>
       </div>
       <div className="mancha2">
-        <div></div>
+        <div>
+
+        </div>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Register;
