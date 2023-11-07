@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-weight: none;
+    text-decoration: none;
+}
+
+.page{
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cover {
+    background-color: white ;
+    width: 30em;
+    height: auto;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cover input {
+    border: none;
+    background-color: rgb (229, 226, 226);
+    height: 4em;
+    width: 80%;
+    border-radius: 0.25em;
+    border-bottom: 1px solid #6B6B6B;
+    padding: 2em;
+    margin: 8px 0;
+}
+
+.cover input:focus {
+    outline-color: #F9B52F;
+}
+
+.login-btn {
+    width: 40%;
+    height: 3em;
+    border:none;
+    outline:none;
+    background-color: #F9B52F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    margin: 20px 0 15px 0;
+}
+
+
+.login-btn:hover { 
+    transform: scale(1.1);
+}
+
+.divmain{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line{
+    width: 20%;
+    height: 10px;
+    background-color: #F9B52F;
+    border-radius: 50px;
+    margin: 15px 0;
+}
+
+.description{
+    color: #6B6B6B;
+    font-size: 15px;
+    width: auto;
+    
+}
+
+.content_title_login{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.title {
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.title_main{
+    margin: 13px 0;
+    font-size: 25px;
+    color:#F9B52F;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content_foot{
+    display: flex;
+    flex-direction: row; 
+    color: #6B6B6B;  
+    margin-bottom: 25px;
+}
+
+.text{
+    color:#F9B52F;
+    font-weight: bold;
+    margin-left: 10px;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.mancha1{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mancha_bajito{
+    width: 250px;
+    height: 100px;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/ManchaInferior.svg);
+}
+.logo{
+    width: 210px;
+    height: 45px;
+    background-size: cover;
+    background-image: url(../assets/logoOlva.svg);
+    margin-left: 150px;
+    margin-top: 30px;
+}
+.mancha2{
+    width: auto;
+    height: 100vh; 
+
+}
+.mancha2 div{
+    width: 200px;
+    height: 150px;    
+    background-size: cover;
+    margin-left: 150px;
+    display: flex;
+    background-image: url(../assets/ManchaSuperior.svg);
+}
+
+.back{
+    background-color: #F9B52F;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.flecha{
+    width: 50px;
+    height: 50px;
+    filter: invert(100%) sepia(0%) saturate(28%) hue-rotate(60deg) brightness(107%) contrast(101%);
+}
+.content_error{
+    height: auto;
+    padding: 10px;
+    background-color: rgb(255, 218, 218);
+    color: #6B6B6B;  
+    width: 80%;
+    font-size: 10px;
+    border-radius: 0 0 10px 10px;
+}
