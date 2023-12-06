@@ -22,7 +22,6 @@ function Login() {
   const onSubmit = async data => {
     setFormData(data);
 
-    /*
     try {
       const response = await axios.post('http://localhost:5000/login', data);
       console.log(response.data);
@@ -31,7 +30,7 @@ function Login() {
         //guardar la sesión
         localStorage.setItem("user", response.data.username);
         console.log(User)
-        navigate("/home");
+        navigate("/chatBot");
 
       } else {
         setError(response.data.message);
@@ -39,7 +38,6 @@ function Login() {
     } catch (error) {
       console.log(error.response.data);
     }
-    */
   };
 
   return (

@@ -1,26 +1,9 @@
-import React, { useEffect } from 'react';
-import Form from "./components/form/form";
+import FormOption from "./components/form/formOption";
 import Header from "./components/ui/Header";
 import Logo from "../src/assets/logo.png";
 import "../src/style/Home.css"
 
-function ChatBot() {
-  useEffect(() => {
-    console.log('esperando la página...');
-    // Verificar si la página ya ha sido recargada
-    const hasReloaded = localStorage.getItem('hasReloaded');
-
-    if (!hasReloaded) {
-      // Realizar alguna acción antes de recargar (puedes dejar esto vacío o agregar algo según tus necesidades)
-      console.log('Recargando la página...');
-
-      // Marcar la página como recargada en localStorage
-      localStorage.setItem('hasReloaded', 'true');
-
-      // Recargar la página
-      window.location.reload();
-    }
-  }, []);
+function Home() {
   return (
     
       <div>
@@ -37,7 +20,7 @@ function ChatBot() {
             <img src={Logo} className="logo_home" alt="logo"></img>
             <p><em>REALIZA TU CONSULTA CON EL NUEVO CHAT-BOT</em></p>
           </div>
-          <div className="content_chat_main">
+          <div className="content_chat_main_BOS">
             <div className="chat_title">
               <p className="bolt">Te damos la bienvenida al nuevo ChatBot</p>
               <p>Experimenta tu copiloto para resolver tus consultas</p>
@@ -46,7 +29,7 @@ function ChatBot() {
                 <div className="triangulo"></div>
               </div>
             </div>
-            <Form />
+            <FormOption />
           </div>
         </div>
       </div>
@@ -54,4 +37,4 @@ function ChatBot() {
   );
 }
 
-export default ChatBot;
+export default Home;

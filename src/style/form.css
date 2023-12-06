@@ -1,11 +1,9 @@
 .contetChat{
     width: auto;
-    margin-left: 10px;
-    height: 100%;
-    stroke-linecap: round;
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
+    height: calc(100% - 80px); 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 80% 10%;
 }
 
 
@@ -23,8 +21,8 @@
 .content_text_main {
     width: auto;
     height: 100%;
-    overflow: scroll;
-    padding-bottom: 50px;
+    overflow-x: hidden;
+    padding-bottom: 15px;
 }
 
 /**===================== CONTENT CHAT ======================*/
@@ -33,7 +31,7 @@
     height: auto;
     padding: 0 10px 0 10px;
     display: flex;
-    justify-content: start;
+    justify-content:flex-start;
 }
 .bot {
     background-color: rgb(255, 255, 255);
@@ -44,7 +42,7 @@
     height: auto;
     padding: 0 10px 0 10px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .user{
     background-color: #F9B52F;
